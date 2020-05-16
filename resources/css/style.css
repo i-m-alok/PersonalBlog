@@ -1,31 +1,38 @@
 body{
-  margin:0px;
+  margin:0;
+  padding: 0;
+}
+/* *{
+  border: 1px solid red;
+} */
+.container{
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px auto 100px;
   grid-template-areas:
   "head"
   "recent-post"
   "footer";
 }
-/* *{
-  border: 1px solid red;
-} */
 .heading{
   background: linear-gradient(to right, #000046, #1cb5e0);
   text-align: center;
+  padding: 2%;
   color: white;
+  grid-area: head;
+}
+
+h1{
+  margin-top: 0;
 }
 
 .recent-posts{
-  /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  "post"
-  "post"; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 2%;
+  grid-area: recent-post;
 }
 .post{
   margin: 2%;
@@ -62,6 +69,7 @@ footer{
   color: white;
   margin-top: 20px;
   margin-bottom: 0px;
+  grid-area: footer;
 }
 
 @media (min-width:600px) and (max-width: 900px){
